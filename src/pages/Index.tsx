@@ -309,7 +309,7 @@ const Index = () => {
               <div>
                 <Icon name="Phone" size={32} className="mx-auto mb-2 text-primary" />
                 <div className="font-bold">Телефон</div>
-                <div className="text-muted-foreground">+7 (495) 123-45-67</div>
+                <div className="text-muted-foreground">+7 (965) 300-08-87</div>
               </div>
               <div>
                 <Icon name="Mail" size={32} className="mx-auto mb-2 text-primary" />
