@@ -117,7 +117,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-4">Наши услуги</h2>
             <p className="text-xl text-muted-foreground">Полный спектр ремонтных работ для вашего комфорта</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/20 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
