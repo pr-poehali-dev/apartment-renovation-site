@@ -169,13 +169,14 @@ const Index = () => {
                 className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-lg"
                 style={{ left: `${sliderPosition}%` }}
                 onMouseDown={(e) => {
+                  const container = e.currentTarget.parentElement;
+                  if (!container) return;
+                  
                   const handleMouseMove = (moveEvent: MouseEvent) => {
-                    const rect = e.currentTarget.parentElement?.getBoundingClientRect();
-                    if (rect) {
-                      const x = moveEvent.clientX - rect.left;
-                      const percentage = (x / rect.width) * 100;
-                      setSliderPosition(Math.max(0, Math.min(100, percentage)));
-                    }
+                    const rect = container.getBoundingClientRect();
+                    const x = moveEvent.clientX - rect.left;
+                    const percentage = (x / rect.width) * 100;
+                    setSliderPosition(Math.max(0, Math.min(100, percentage)));
                   };
                   const handleMouseUp = () => {
                     document.removeEventListener('mousemove', handleMouseMove);
